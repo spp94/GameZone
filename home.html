@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SPP CREATIONS</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+    *{
+    margin:0;
+    padding:0;
+    font-family: Century Gothic;
+}
+header {
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('homebackground.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+ul{
+    float:right;
+    list-style-type:none;
+}
+ul li{
+    display:inline-block;
+}
+ul li a{
+    text-decoration:none;
+    color:#fff;
+    padding:5px 20px;
+    border: 1px solid transparent ;
+    transition: 0.6s ease;
+}
+ul li a:hover{
+    background-color: #133337;
+    color:#000;
+}
+ul li.active a{
+    background-color:#fff;
+    color:#000;
+}
+#activebtn{
+     color:#fff;
+}
+.main{
+    max-width:1200px;
+    margin:auto;
+}
+.title{
+    position:absolute;
+    top:56%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.title h1{
+    color:#fff;
+    font-size:20px;
+    font-style:italic;
+}
+.button{
+    position:absolute;
+    top:68%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.btn{
+    border:1px solid #fff;
+    padding: 10px 30px;
+    color:#fff;
+    text-decoration:none;
+    transition: 0.6s ease;
+}
+.btn:hover{
+    background-color: #000;
+    color: #fff;
+}
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="title">
+            <h1>Let the Game Begin !!!</h1>
+        </div>
+        <div class="button">
+            <a href="index.html" class="btn" id="activebtn">WORD BEATER</a>
+            <a href="rpsindex.html" class="btn" id="activebtn">ROCK PAPER SCISSOR CUT</a>
+            <a href="tictactoe.html" class="btn" id="activebtn">TIC-TAC-TOE</a>
+        </div>
+    </header>
+</body>
+</html>
