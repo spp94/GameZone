@@ -275,7 +275,7 @@ h5{
     </section>
 
     <script type="text/javascript">
-    // 5 parts 
+   // 5 parts 
 
 
 
@@ -414,7 +414,19 @@ window.onload = function () {
                     ctx.closePath();
 
                     symbol[num - 1] = 'X';
+                    filled[num - 1] = true;
+                    turn = turn + 1;
 
+                    for (var j = 0; j < winner.length; j++) {
+
+                        if ((symbol[winner[j][0]] == 'X') && (symbol[winner[j][1]] == 'X') && (symbol[winner[j][2]] == 'X')) {
+                            document.getElementById("result").innerText = "Congratulations you have won!";
+                            gameOver = true;
+                            break;
+                        }
+                    }
+
+                   
                     var sValue = systemMove();
                     userSelections.push(sValue);
                     var box1 = document.getElementById('canvas'+sValue);
@@ -436,27 +448,9 @@ window.onload = function () {
                                 symbol[sValue - 1] = 'O';
                             }
                         }
-                    
+                turn = turn + 1;
 
-                //else {
-
-                //    ctx.beginPath();
-
-                //    ctx.arc(50, 50, 35, 0, 2 * Math.PI, false);
-
-                //    ctx.strokeStyle = "dodgerblue";
-
-                //    ctx.stroke();
-
-                //    ctx.closePath();
-
-                //    symbol[num - 1] = 'O';
-
-                //}
-
-                turn = turn + 2;
-
-                filled[num - 1] = true;
+                
                 filled[sValue - 1] = true;
 
 
@@ -465,13 +459,7 @@ window.onload = function () {
                 //var s = symbol[num - 1];
 
                 for (var j = 0; j < winner.length; j++) {
-
-                    if ((symbol[winner[j][0]] == 'X') && (symbol[winner[j][1]] == 'X') && (symbol[winner[j][2]] == 'X')) {
-                            document.getElementById("result").innerText = "Congratulations you have won!";
-                            gameOver = true;
-                            break;
-                    }
-                    else if ((symbol[winner[j][0]] == 'O') && (symbol[winner[j][1]] == 'O') && (symbol[winner[j][2]] == 'O')) {
+                    if ((symbol[winner[j][0]] == 'O') && (symbol[winner[j][1]] == 'O') && (symbol[winner[j][2]] == 'O')) {
                             document.getElementById("result").innerText = "Better Luck next time!";
                             gameOver = true;
                             break;
