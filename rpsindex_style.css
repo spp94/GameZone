@@ -1,0 +1,16 @@
+img{
+    width: 50px;
+    border: 1px solid transparent;
+    border-radius: 50px;
+}
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('https://static.wixstatic.com/media/2f93da_0ea710572915421282f5440c89bf46d7~mv2_d_4963_2792_s_4_2.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.jumbotron {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    height:10px;
+}
